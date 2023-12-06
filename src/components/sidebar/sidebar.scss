@@ -1,0 +1,73 @@
+.sidebar {
+  background-color: #efefef;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px;
+  width: 16%;
+  padding: 18px;
+  min-height: 100vh;
+  border-radius: 8px;
+  position: relative;
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 50px;
+
+    .icon {
+      font-size: 30px;
+    }
+
+    p {
+      font-size: 20px;
+      letter-spacing: 1px;
+      color: rgb(95, 95, 95);
+    }
+  }
+
+  ul {
+    li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 15px;
+      padding: 13px 8px;
+      border-radius: 8px;
+      cursor: pointer;
+      &:hover {
+        background-color: white;
+      }
+     
+
+      svg {
+        color: rgb(85, 85, 85);
+        font-size: 20px;
+      }
+      p {
+        font-weight: 500;
+        font-size: 15px;
+        color: rgb(90, 90, 90);
+      }
+    }
+  }
+
+  #logout{
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+
+    svg{
+      font-size: 20px;
+      color: rgb(108, 108, 108);
+    }
+
+    p{
+      font-weight: bold;
+      color: gray;
+      line-height: -10px;
+    }
+  }
+}

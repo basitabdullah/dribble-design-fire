@@ -1,0 +1,72 @@
+.smWidget {
+  background-color: #efefef;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px;
+  border-radius: 8px;
+  padding: 10px;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  .left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .title {
+      font-weight: bold;
+      color: gray;
+    }
+
+    .counter {
+      font-size: 25px;
+      font-weight: lighter;
+    }
+
+    .link {
+      font-size: 13px;
+      color: rgba(0, 0, 0, 0.817);
+      border-bottom: 1px solid black;
+      cursor: pointer;
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+
+    .perc {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .arrow {
+        &.up {
+          color: green;
+        }
+
+        &.down {
+          color: red;
+        }
+      }
+
+      p {
+        color: green;
+        font-size: 14px;
+      }
+    }
+    .icon {
+      display: flex;
+      font-size: 20px;
+      margin: 10px;
+      border-radius: 5px;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(30, 159, 228, 0.194);
+
+      svg {
+        background-color: transparent;
+      }
+    }
+  }
+}

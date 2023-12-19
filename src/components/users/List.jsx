@@ -1,17 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./list.scss"
 import Navbar from '../navbar/Navbar'
 import Sidebar from '../sidebar/Sidebar'
 import Datatable from '../datatable/Datatable'
-import { UserColumns, UserRows } from '../../dataTableSource'
+import { userColumns, userRows } from '../../dataTableSource'
+
+
 const List = () => {
+
+
   return (
     <div className='list'>
       <Sidebar/>
         <div className="navConatiner">
           <Navbar/>
           <div className="muiTableConatiner">
-            <Datatable title={"Users"} rows={UserRows} cols={UserColumns}/>
+            <Datatable title={"Users"} rows={userRows} cols={userColumns}/>
           </div>
         </div>
     </div>

@@ -1,140 +1,137 @@
-import { MdVerified } from "react-icons/md";
-import { IoClose } from "react-icons/io5";
-import { Link } from "react-router-dom";
 
-
-export const UserRows = [
-    {    
-        id: 1, 
-        lastName: "Snow",
-        firstName: "Jon",
-        age: 35,
-        verified: true 
-    },
-    {
-      id: 2,
-      lastName: "Lannister",
-      firstName: "Cersei",
-      age: 42,
-      verified: true,
-    },
-    {
-      id: 3,
-      lastName: "Lannister",
-      firstName: "Jaime",
-      age: 45,
-      verified: false,
-    },
-    { id: 4, lastName: "Stark", firstName: "Arya", age: 16, verified: true },
-    {
-      id: 5,
-      lastName: "Targaryen",
-      firstName: "Daenerys",
-      age: 12,
-      verified: false,
-    },
-    {
-      id: 6,
-      lastName: "Melisandre",
-      firstName: "Jame",
-      
-      verified: true,
-    },
-    {
-      id: 7,
-      lastName: "Clifford",
-      firstName: "Ferrara",
-      age: 44,
-      verified: false,
-    },
-    {
-      id: 8,
-      lastName: "Frances",
-      firstName: "Rossini",
-      age: 36,
-      verified: false,
-    },
-    { id: 9, lastName: "Roxie", firstName: "Harvey", age: 65, verified: false },
-  ];
+export const userRows = [
+  {
+    id: 1,
+    username: "Snow",
+    img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    status: "active",
+    email: "1snow@gmail.com",
+    age: 35,
+  },
+  {
+    id: 2,
+    username: "Jamie Lannister",
+    img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    email: "2snow@gmail.com",
+    status: "passive",
+    age: 42,
+  },
+  {
+    id: 3,
+    username: "Lannister",
+    img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    email: "3snow@gmail.com",
+    status: "pending",
+    age: 45,
+  },
+  {
+    id: 4,
+    username: "Stark",
+    img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    email: "4snow@gmail.com",
+    status: "active",
+    age: 16,
+  },
+  {
+    id: 5,
+    username: "Targaryen",
+    img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    email: "5snow@gmail.com",
+    status: "passive",
+    age: 22,
+  },
+  {
+    id: 6,
+    username: "Melisandre",
+    img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    email: "6snow@gmail.com",
+    status: "active",
+    age: 15,
+  },
+  {
+    id: 7,
+    username: "Clifford",
+    img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    email: "7snow@gmail.com",
+    status: "passive",
+    age: 44,
+  },
+  {
+    id: 8,
+    username: "Frances",
+    img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    email: "8snow@gmail.com",
+    status: "active",
+    age: 36,
+  },
+  {
+    id: 9,
+    username: "Roxie",
+    img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    email: "snow@gmail.com",
+    status: "pending",
+    age: 65,
+  },
+  {
+    id: 10,
+    username: "Roxie",
+    img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    email: "snowss@gmail.com",
+    status: "active",
+    age: 65,
+  },
+];
   
  
-  export const UserColumns = [
-    { field: "id", headerName: "ID", width: 90 },
-    {
-      field: "firstName",
-      headerName: "First name",
-      width: 200,
-      editable: true,
-      renderCell: (prams) => {
-        return (
-          <div className="imgContainer">
-            <img
-              src="https://images.unsplash.com/photo-1488161628813-04466f872be2?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt=""
-            />
-  
-            {prams.row.firstName}
-          </div>
-        );
-      },
-    },
-    {
-      field: "lastName",
-      headerName: "Last name",
-      width: 150,
-      editable: true,
-    },
-  
-    {
-      field: "age",
-      headerName: "Age",
-      width: 150,
-      editable: true,
-    },
-  
-    {
-      field: "fullName",
-      headerName: "Full name",
-      description: "This column has a value getter and is not sortable.",
-      sortable: false,
-      width: 160,
-      valueGetter: (params) =>
-        `${params.row.firstName || ""} ${params.row.lastName || ""}`,
-    },
-  
-    {
-      field: "verified",
-      headerName: "Verified",
-      width: 150,
-      editable: false,
-      renderCell: (params) => {
-        return (
-          <div className="iconsContainer">
-            {params.row.verified ? (
-              <MdVerified className="iconTrue" />
-            ) : (
-              <IoClose className="iconFalse" />
-            )}
-          </div>
-        );
-      },
-    },
-  
-    {
-      field: "actions",
-      headerName: "Actions",
-      sortable: false,
-      width: 160,
-      renderCell: (params) => (
-        <div className="cellAction">
-          <Link to="/users/12455">
-            <div className="viewBtn">View</div>
-          </Link>
-          <div className="deleteBtn">Delete</div>
+export const userColumns = [
+  { field: "id", headerName: "ID", width: 70 },
+  {
+    field: "user",
+    headerName: "User",
+    width: 230,
+    renderCell: (params) => {
+      return (
+        <div className="cellWithImg">
+          <img className="cellImg" src={params.row.img} alt="avatar" />
+          {params.row.username}
         </div>
-      ),
+      );
     },
-  ];
+  },
+  {
+    field: "email",
+    headerName: "Email",
+    width: 230,
+  },
+
+  {
+    field: "age",
+    headerName: "Age",
+    width: 100,
+  },
+  {
+    field: "status",
+    headerName: "Status",
+    width: 160,
+    renderCell: (params) => {
+      return (
+        <div className={`cellWithStatus ${params.row.status}`}>
+          {params.row.status}
+        </div>
+      );
+    },
+  },
+];
+
+
+
+
+
+
+
+
+
+  //product section
 
   export const productInputsRows = [
     {
@@ -181,8 +178,9 @@ export const UserRows = [
       editable: true,
       renderCell: (prams) => {
         return (
-          <div className="imgContainer">
+          <div className="cellWithImg">
             <img
+            className="cellImg"
               src="https://images.unsplash.com/photo-1488161628813-04466f872be2?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt=""
             />

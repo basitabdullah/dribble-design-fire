@@ -4,7 +4,7 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import Chart from "../../components/chart/Chart";
 import Datatable from "../../components/datatable/Datatable";
-import { UserColumns, UserRows } from "../../dataTableSource";
+import { userColumns, userRows } from "../../dataTableSource";
 const New = () => {
   return (
     <div className="new">
@@ -59,7 +59,7 @@ const New = () => {
         </div>
 
         <div className="dataTable">
-          <Datatable title={"Transactions"} rows={UserRows} cols={UserColumns} />
+          <Datatable title={"Transactions"} rows={userRows} cols={userColumns} />
         </div>
       </div>
     </div>

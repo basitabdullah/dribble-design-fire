@@ -18,7 +18,7 @@
     font-weight: 500;
     color: gray;
     border-bottom: 1px solid rgb(212, 212, 212);
-    width: 90px;
+    width: fit-content;
   }
 
   .cellAction {
@@ -34,11 +34,11 @@
     }
   }
 
-  .imgContainer {
+  .cellWithImg {
     display: flex;
     align-items: center;
     gap: 20px;
-    img {
+    .cellImg {
       width: 32px;
       height: 32px;
       border-radius: 50%;
@@ -46,6 +46,27 @@
     }
   }
 
+  .cellWithStatus{
+    padding: 5px;
+    border-radius: 5px;
+    color: rgb(128, 128, 128);
+
+    &.active{
+      background-color: rgba(50, 255, 47, 0.3);
+      color: rgb(47, 255, 75);
+    }
+
+    &.passive{
+      background-color: rgba(255, 255, 0, 0.300);
+      color: rgb(255, 208, 0);
+    }
+
+    &.pending{
+      background-color: rgba(255, 0, 0, 0.300);
+      color: red;
+
+    }
+  }
   .iconsContainer {
     margin-left: 25px;
 

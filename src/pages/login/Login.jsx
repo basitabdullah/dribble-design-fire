@@ -1,18 +1,22 @@
-import React, { useState } from 'react'
+import React, {  useContext, useState } from 'react'
 import "./login.scss"
 import { auth } from '../../firebase'
 import {  signInWithEmailAndPassword } from "firebase/auth";
 import {  useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../AuthContext';
 const Login = () => {
   const [error , setError] = useState(false)
   const [email ,setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const {dispatch} = useContext(AuthContext)
+
   const navigate = useNavigate()
  const handleSubmit =(e)=>{
    e.preventDefault()
   signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     const user = userCredential.user;
+    dispatch({type : "LOGIN" , payload : user})
     navigate("/")
   })
   .catch((error) => {

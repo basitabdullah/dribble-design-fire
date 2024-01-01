@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Home from "./pages/home/Home";
 import List from "./components/users/List";
@@ -6,10 +6,11 @@ import New from "./components/new/New";
 import Product from "./pages/product/Product";
 import NewUser from "./components/newUser/NewUser";
 import Login from "./pages/login/Login";
+import { AuthContext } from "./AuthContext";
 const App = () => {
-  const currUser = true;
+  const {currentUser} = useContext(AuthContext)
   const UserAuth = ({ children }) => {
-    return currUser ? children : <Navigate to="/login" />;
+    return currentUser ? children : <Navigate to="/login" />;
   };
   return (
     <BrowserRouter>

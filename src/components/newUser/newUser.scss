@@ -61,6 +61,11 @@
           letter-spacing: 1px;
           background-color: black;
           border: none;
+
+          &:disabled{
+            background-color: rgba(0, 0, 0, 0.457);
+            cursor: not-allowed;
+          }
         }
       }
     }

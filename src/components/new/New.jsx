@@ -4,7 +4,7 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import Chart from "../../components/chart/Chart";
 import Datatable from "../../components/datatable/Datatable";
-import { userColumns, userRows } from "../../dataTableSource";
+import { userColumns } from "../../dataTableSource";
 const New = () => {
   return (
     <div className="new">

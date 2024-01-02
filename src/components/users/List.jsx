@@ -3,7 +3,7 @@ import "./list.scss"
 import Navbar from '../navbar/Navbar'
 import Sidebar from '../sidebar/Sidebar'
 import Datatable from '../datatable/Datatable'
-import { userColumns, userRows } from '../../dataTableSource'
+import { userColumns } from '../../dataTableSource'
 
 
 const List = () => {
@@ -15,7 +15,7 @@ const List = () => {
         <div className="navConatiner">
           <Navbar/>
           <div className="muiTableConatiner">
-            <Datatable title={"Users"} rows={userRows} cols={userColumns}/>
+            <Datatable title={"Users"}  cols={userColumns}/>
           </div>
         </div>
     </div>

@@ -59,7 +59,7 @@ const New = () => {
         </div>
 
         <div className="dataTable">
-          <Datatable title={"Transactions"} rows={userRows} cols={userColumns} />
+          <Datatable title={"Transactions"} cols={userColumns} />
         </div>
       </div>
     </div>
